@@ -1,0 +1,11 @@
+Lekin ek baat yaad rakhna
+
+Jab bhi VS Code ya terminal band karke dobara khologi, har baar pehle ye command chalani hogi:
+
+.\venv\Scripts\Activate.ps1
+
+Jab tak terminal ke start mein:
+
+(venv)
+
+na likha ho, tab tak code run mat karna.
