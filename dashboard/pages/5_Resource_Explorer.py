@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 from utils.style import load_css
+from utils.loader import load_data
 
 st.set_page_config(page_title="Resource Explorer", layout="wide")
 
@@ -77,7 +78,7 @@ st.markdown(
 # Load Data
 # ==========================
 
-df = pd.read_csv("../data/processed/cloud_recommendations.csv")
+_, df, _ = load_data()
 
 # ==========================
 # Header

@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
 from utils.style import load_css
 from utils.region_coordinates import REGION_COORDINATES
+from utils.loader import load_data
 
 st.set_page_config(
     page_title="Global Infrastructure",
@@ -54,7 +54,7 @@ with st.container(border=True):
 # Load Data
 # ==========================
 
-df = pd.read_csv("../data/processed/cloud_recommendations.csv")
+_, df, _ = load_data()
 
 # ==========================
 # Region Summary

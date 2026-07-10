@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 from utils.style import load_css
+from utils.loader import load_data
 
 st.set_page_config(
     page_title="Executive Dashboard",
@@ -111,8 +112,8 @@ PLOTLY_TEMPLATE = "plotly_white"
 # ==========================
 # Load Data
 # ==========================
-df = pd.read_csv("../data/processed/cloud_recommendations.csv")
-forecast = pd.read_csv("../data/forecast/cost_forecast.csv")
+
+_, df, forecast = load_data()
 
 # ==========================
 # Header

@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from utils.style import load_css
+from utils.loader import load_data
 
 st.set_page_config(page_title="AI Anomaly Detection", layout="wide")
 
@@ -65,11 +66,11 @@ st.markdown(
 PLOTLY_TEMPLATE = "plotly_dark"
 
 # ==========================
+# ==========================
 # Load Data
 # ==========================
 
-df = pd.read_csv("../data/processed/cloud_usage_predictions.csv")
-
+df, _, _ = load_data()
 # ==========================
 # Header
 # ==========================
